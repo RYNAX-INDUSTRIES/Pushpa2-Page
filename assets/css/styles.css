@@ -1,0 +1,316 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #f2f2f2;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #212121;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the nav to the right */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: 50px;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff7043;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+}
+
+.hamburger-menu .bar {
+    height: 4px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('assets/images/hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 50px 20px;
+    min-height: 400px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    padding: 15px 30px;
+    background-color: #ff7043;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #ff5722;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+/* Features Section */
+#features {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #ff7043;
+}
+
+#features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#features li {
+    font-size: 18px;
+    padding: 10px;
+    color: #f2f2f2;
+    border-bottom: 1px solid #444;
+    transition: transform 0.3s ease;
+}
+
+#features li:hover {
+    transform: translateX(10px);
+}
+
+#download-guide {
+    padding: 60px 20px;
+    background-color: #212121;
+    text-align: center;
+}
+
+#download-guide h2 {
+    font-size: 28px;
+    color: #ff7043;
+    margin-bottom: 20px;
+}
+
+#download-guide ol {
+    padding: 20px;
+    list-style-type: decimal;
+    text-align: left;
+    display: inline-block;
+    background-color: #333;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+#download-guide li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ff7043;
+}
+
+/* Media Queries - Mobile First */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row; /* Keep the header items in the same row */
+        justify-content: space-between;
+    }
+
+    nav {
+        margin-left: 0; /* Remove any extra margin */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #212121;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    #hero {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn-download {
+        padding: 12px 25px;
+    }
+
+    #features {
+        padding: 40px 20px;
+    }
+
+    #features h2 {
+        font-size: 24px;
+    }
+
+    #download-guide {
+        padding: 40px 20px;
+    }
+
+    #download-guide h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        display: flex;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .nav-links li {
+        margin-left: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .btn-download {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #features h2 {
+        font-size: 22px;
+    }
+
+    #download-guide h2 {
+        font-size: 22px;
+    }
+
+    #download-guide ol {
+        max-width: 90%;
+    }
+}
